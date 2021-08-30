@@ -7,6 +7,7 @@ import {
 import { Provider } from 'react-redux';
 import Missions from './components/missions/Missions';
 import Rockets from './components/rockets/Rockets';
+import Dragons from './components/dragons/Dragons';
 import Profile from './components/profile/Profile';
 import store from './redux/configStore';
 import logo from './logo.svg';
@@ -22,6 +23,11 @@ const routes = [
     path: '/missions',
     name: 'Missions',
     component: Missions,
+  },
+  {
+    path: '/dragons',
+    name: 'Dragons',
+    component: Dragons,
   },
   {
     path: '/profile',
