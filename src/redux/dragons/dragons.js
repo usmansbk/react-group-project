@@ -1,6 +1,7 @@
 const BASE_URL = 'https://api.spacexdata.com/v3/dragons';
 const LOAD_DRAGONS = 'dragons/load';
 const BOOK_DRAGON = 'dragons/book';
+const CANCEL_BOOKING = 'dragons/cancel-booking';
 
 const loadDragons = (payload) => ({
   type: LOAD_DRAGONS,
@@ -9,6 +10,11 @@ const loadDragons = (payload) => ({
 
 export const bookDragon = (id) => ({
   type: BOOK_DRAGON,
+  id,
+});
+
+export const cancelBooking = (id) => ({
+  type: CANCEL_BOOKING,
   id,
 });
 
@@ -38,6 +44,17 @@ const reducer = (state = [], action) => {
         return {
           ...dragon,
           reserved: true,
+        };
+      });
+    case CANCEL_BOOKING:
+      return state.map((dragon) => {
+        if (dragon.id !== action.id) {
+          return dragon;
+        }
+
+        return {
+          ...dragon,
+          reserved: false,
         };
       });
     default:
