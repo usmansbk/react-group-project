@@ -10,6 +10,10 @@ const Profile = () => {
       title: 'My Missions',
       data: state.missions.filter((mission) => mission.reserved),
     },
+    {
+      title: 'My Dragons',
+      data: state.dragons.filter((dragon) => dragon.reserved),
+    },
   ]));
 
   return (
