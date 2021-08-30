@@ -3,3 +3,7 @@ const LOAD_ROCKETS = 'rockets/load';
 const BOOK_ROCKET = 'rockets/book';
 const CANCEL_BOOKING = 'rockets/cancel-booking';
 
+const loadRockets = (payload) => ({
+  type: LOAD_ROCKETS,
+  payload,
+});
