@@ -1,3 +1,7 @@
-body {
-  background-color: aliceblue;
+a {
+  text-decoration: none;
+}
+
+.App-active-link {
+  text-decoration: underline;
 }
