@@ -1,9 +1,11 @@
 import {
   HashRouter as Router, NavLink, Switch, Route,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Missions from './components/missions/Missions';
 import Rockets from './components/rockets/Rockets';
 import Profile from './components/profile/Profile';
+import store from './redux/configStore';
 import './App.css';
 
 const routes = [
@@ -36,13 +38,15 @@ const Header = () => (
 );
 
 const App = () => (
-  <Router>
-    <Header />
-    <Switch>
-      {routes.map(({ path, component }) => (
-        <Route key={path} exact path={path} component={component} />))}
-    </Switch>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <Header />
+      <Switch>
+        {routes.map(({ path, component }) => (
+          <Route key={path} exact path={path} component={component} />))}
+      </Switch>
+    </Router>
+  </Provider>
 );
 
 export default App;
