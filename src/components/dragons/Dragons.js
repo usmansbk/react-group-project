@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDragons } from '../../redux/dragons/dragons';
+import { fetchDragons, bookDragon } from '../../redux/dragons/dragons';
 
 const Dragons = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Dragons = () => {
       dispatch(fetchDragons);
     }
   }, []);
-
+  const handleBooking = (id) => dispatch(bookDragon(id));
   return (
     <Container>
       {dragons.map(({
@@ -39,7 +39,7 @@ const Dragons = () => {
               </Button>
             )}
             {!reserved && (
-              <Button variant="primary">
+              <Button variant="primary" onClick={() => handleBooking(id)}>
                 Reserve dragon
               </Button>
             )}
