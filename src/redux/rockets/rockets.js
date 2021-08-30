@@ -7,3 +7,8 @@ const loadRockets = (payload) => ({
   type: LOAD_ROCKETS,
   payload,
 });
+
+export const bookRocket = (id) => ({
+  type: BOOK_ROCKET,
+  id,
+});
