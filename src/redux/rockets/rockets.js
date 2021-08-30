@@ -17,3 +17,16 @@ export const cancelBooking = (id) => ({
   type: CANCEL_BOOKING,
   id,
 });
+
+export const fetchRockets = async (dispatch) => {
+  const response = await fetch(BASE_URL);
+  const rockets = await response.json();
+
+  dispatch(loadRockets(rockets.map((rocket) => ({
+    id: rocket.rocket_id,
+    name: rocket.rocket_name,
+    type: rocket.rocket_type,
+    description: rocket.description,
+    images: rocket.flickr_images,
+  }))));
+};
