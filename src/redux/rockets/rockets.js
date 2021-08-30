@@ -12,3 +12,8 @@ export const bookRocket = (id) => ({
   type: BOOK_ROCKET,
   id,
 });
+
+export const cancelBooking = (id) => ({
+  type: CANCEL_BOOKING,
+  id,
+});
