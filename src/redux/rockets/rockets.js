@@ -30,3 +30,36 @@ export const fetchRockets = async (dispatch) => {
     images: rocket.flickr_images,
   }))));
 };
+
+const reducer = (state = [], action) => {
+  switch (action.type) {
+    case LOAD_ROCKETS:
+      return action.payload;
+    case BOOK_ROCKET:
+      return state.map((rocket) => {
+        if (rocket.id !== action.id) {
+          return rocket;
+        }
+
+        return {
+          ...rocket,
+          reserved: true,
+        };
+      });
+    case CANCEL_BOOKING:
+      return state.map((rocket) => {
+        if (rocket.id !== action.id) {
+          return rocket;
+        }
+
+        return {
+          ...rocket,
+          reserved: false,
+        };
+      });
+    default:
+      return state;
+  }
+};
+
+export default reducer;
