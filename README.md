@@ -4,7 +4,7 @@
 
 > Book rockets and join space missions
 
-![screenshot](./app_screenshot.jpeg)
+![screenshot](./app_screenshot.png)
 
 Space Travelers' Hub is an application that allows you to book rockets and join space missions for commerial and scientific purpose.
 
