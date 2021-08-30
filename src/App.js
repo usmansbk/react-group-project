@@ -1,9 +1,15 @@
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
 import {
   HashRouter as Router, NavLink, Switch, Route,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Missions from './components/missions/Missions';
 import Rockets from './components/rockets/Rockets';
 import Profile from './components/profile/Profile';
+import store from './redux/configStore';
+import logo from './logo.svg';
 import './App.css';
 
 const routes = [
@@ -25,24 +31,41 @@ const routes = [
 ];
 
 const Header = () => (
-  <header>
-    <nav>
-      <ul>
-        {routes.map(({ name, path }) => (
-          <li key={path}><NavLink activeClassName="App-active-link" exact to={path}>{name}</NavLink></li>))}
-      </ul>
-    </nav>
-  </header>
+  <Navbar sticky="top" bg="white">
+    <Container className="py-2 border-bottom">
+      <Navbar.Brand className="h1">
+        <img src={logo} className="App-logo" alt="logo" />
+        {' '}
+        Space Traveler&apos;s Hub
+      </Navbar.Brand>
+      <Nav>
+        {(routes.map(({ path, name }) => (
+          <Nav.Link key={path}>
+            <NavLink
+              className="App-link"
+              activeClassName="App-active-link"
+              exact
+              to={path}
+            >
+              {name}
+            </NavLink>
+          </Nav.Link>
+        )))}
+      </Nav>
+    </Container>
+  </Navbar>
 );
 
 const App = () => (
-  <Router>
-    <Header />
-    <Switch>
-      {routes.map(({ path, component }) => (
-        <Route key={path} exact path={path} component={component} />))}
-    </Switch>
-  </Router>
+  <Provider store={store}>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Header />
+      <Switch>
+        {routes.map(({ path, component }) => (
+          <Route key={path} exact path={path} component={component} />))}
+      </Switch>
+    </Router>
+  </Provider>
 );
 
 export default App;
