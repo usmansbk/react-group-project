@@ -70,7 +70,7 @@ npm test
 
 👤 **Omoogun Olawale**
 
-- GitHub: [@hiromataba](https://github.com/olawale-o)
+- GitHub: [@olawale-o](https://github.com/olawale-o)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/olawaleomoogun/)
 
 ## 🤝 Contributing
