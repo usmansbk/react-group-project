@@ -6,11 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  bookRocket,
-  cancelBooking,
-  fetchRockets,
-} from '../../redux/rockets/rockets';
+import { bookRocket, cancelBooking, fetchRockets } from '../../redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -27,7 +23,9 @@ const Rockets = () => {
 
   return (
     <Container>
-      {rockets.map(({ id, name, description, images, reserved }) => (
+      {rockets.map(({
+        id, name, description, images, reserved,
+      }) => (
         <Row key={id} className="mb-4">
           <Col xs={4}>
             <Image src={images[0]} thumbnail />
@@ -39,10 +37,7 @@ const Rockets = () => {
               {description}
             </p>
             {reserved && (
-              <Button
-                variant="outline-secondary"
-                onClick={() => handleCancellation(id)}
-              >
+              <Button variant="outline-secondary" onClick={() => handleCancellation(id)}>
                 Cancel reservation
               </Button>
             )}
