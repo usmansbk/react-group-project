@@ -11,6 +11,10 @@ const Profile = () => {
       data: state.missions.filter((mission) => mission.reserved),
     },
     {
+      title: 'My Rockets',
+      data: state.rockets.filter((rocket) => rocket.reserved),
+    },
+    {
       title: 'My Dragons',
       data: state.dragons.filter((dragon) => dragon.reserved),
     },
