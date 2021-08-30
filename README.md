@@ -61,12 +61,17 @@ npm test
 👤 **Babakolo Usman Suleiman**
 
 - GitHub: [@usmansbk](https://github.com/usmansbk)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/usman-suleiman-82b444140/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/usmansbk/)
 
 👤 **Hiro Mataba**
 
 - GitHub: [@hiromataba](https://github.com/hiromataba)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/aganzemataba)
+
+👤 **Omoogun Olawale**
+
+- GitHub: [@hiromataba](https://github.com/olawale-o)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/olawaleomoogun/)
 
 ## 🤝 Contributing
 
