@@ -4,7 +4,7 @@
 
 > Book rockets and join space missions
 
-![screenshot](./app_screenshot.jpeg)
+![screenshot](./app_screenshot.png)
 
 Space Travelers' Hub is an application that allows you to book rockets and join space missions for commerial and scientific purpose.
 
@@ -15,7 +15,7 @@ Space Travelers' Hub is an application that allows you to book rockets and join 
 
 ## Live Demo
 
-[Live Demo Link](https://usmansbk.github.io/repo_name)
+[Live Demo Link](https://competent-pasteur-0ea516.netlify.app/)
 
 ## Getting Started
 
@@ -61,12 +61,17 @@ npm test
 👤 **Babakolo Usman Suleiman**
 
 - GitHub: [@usmansbk](https://github.com/usmansbk)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/usman-suleiman-82b444140/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/usmansbk/)
 
 👤 **Hiro Mataba**
 
 - GitHub: [@hiromataba](https://github.com/hiromataba)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/aganzemataba)
+
+👤 **Omoogun Olawale**
+
+- GitHub: [@hiromataba](https://github.com/olawale-o)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/olawaleomoogun/)
 
 ## 🤝 Contributing
 
