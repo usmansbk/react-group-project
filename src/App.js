@@ -2,7 +2,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import {
-  HashRouter as Router, NavLink, Switch, Route,
+  HashRouter as Router, NavLink, Switch, Route, Link,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Missions from './components/missions/Missions';
@@ -40,7 +40,9 @@ const Header = () => (
   <Navbar sticky="top" bg="white">
     <Container className="py-2 border-bottom">
       <Navbar.Brand className="h1">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Link to="/">
+          <img src={logo} className="App-logo" alt="logo" />
+        </Link>
         {' '}
         Space Traveler&apos;s Hub
       </Navbar.Brand>
