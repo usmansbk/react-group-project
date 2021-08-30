@@ -15,7 +15,7 @@ Space Travelers' Hub is an application that allows you to book rockets and join 
 
 ## Live Demo
 
-[Live Demo Link](https://usmansbk.github.io/repo_name)
+[Live Demo Link](https://competent-pasteur-0ea516.netlify.app/)
 
 ## Getting Started
 
